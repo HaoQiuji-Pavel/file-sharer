@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Transfer</title>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- 页面容器 -->
+    <div class="container mx-auto py-8">
+        <!-- 标题 -->
+        <h1 class="text-3xl font-bold text-center mb-6">File Transfer</h1>
+
+        <!-- 上传和连接按钮 -->
+        <div class="flex flex-col items-center space-y-4">
+            <!-- 文件选择 -->
+            <input type="file" id="fileInput" multiple class="block w-full max-w-md border border-gray-300 rounded-lg p-2">
+            <!-- 连接信令服务器 -->
+            <button id="startSignaling" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                连接信令服务器
+            </button>
+            <!-- 开始连接按钮 -->
+            <button id="startConnection" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                Start Connection
+            </button>
+            <button id="test" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                test
+            </button>
+        </div>
+
+        <!-- 上传进度 -->
+        <div id="uploadProgress" class="mt-8 space-y-4"></div>
+
+        <!-- 接收进度 -->
+        <div id="receiveProgress" class="mt-8 space-y-4"></div>
+    </div>
+
+    <!-- 不要显式地引入脚本，不然绑定的事件回调函数会执行两次！ -->
+    <!-- <script src="bundle.js"></script> -->
+</body>
+</html>
